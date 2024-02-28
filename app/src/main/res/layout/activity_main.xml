@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/imageDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/doctor"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:foreground="@color/imageForeground"
+        />
+    
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+       />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
+    <ImageButton
+        android:id="@+id/contactBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/baseline_account_circle_24"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintTop_toBottomOf="@+id/guideH1"
+        app:layout_constraintBottom_toTopOf="@id/guideV2"
+        app:layout_constraintEnd_toStartOf="@+id/appointmentBtn"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+
+        android:contentDescription="User" />
+
+    <ImageButton
+        android:id="@+id/appointmentBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/baseline_calendar_today_24"
+        app:layout_constraintEnd_toStartOf="@+id/guideV2"
+        app:layout_constraintTop_toBottomOf="@+id/guideH1"
+        app:layout_constraintBottom_toTopOf="@+id/guideH2"
+        app:layout_constraintStart_toEndOf="@+id/contactBtn"
+        android:background="@drawable/rounded_button"
+
+        android:contentDescription="Callendar" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome Juan"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintTop_toBottomOf="@+id/guideH2"
+        app:layout_constraintEnd_toStartOf="@+id/guideV2"
+        app:layout_constraintHorizontal_bias="0"
+        />
+    <Button
+        android:id="@+id/bookbtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Book"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintEnd_toStartOf="@+id/guideV2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageDoctor"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
+        app:layout_constraintHorizontal_bias="0"
+
+
+        />
+    <TextView
+        android:id="@+id/ourServicesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our Services"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintTop_toBottomOf="@+id/imageDoctor"
+        app:layout_constraintEnd_toStartOf="@+id/guideV2"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+    <LinearLayout
+        android:id="@+id/hospitalLayout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ourServicesText"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintEnd_toStartOf="@+id/ambulanceLayout"
+        app:layout_constraintBottom_toTopOf="@+id/guideH3"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:src="@drawable/baseline_apartment_24"
+            app:tint="@color/primary"
+
+            />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Hospital"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ambulanceLayout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ourServicesText"
+        app:layout_constraintStart_toEndOf="@+id/hospitalLayout"
+        app:layout_constraintEnd_toStartOf="@+id/appointmentLayout"
+        app:layout_constraintBottom_toTopOf="@+id/guideH3"
+
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:src="@drawable/baseline_assignment_turned_in_24"
+            app:tint="@color/primary"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Appointments"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/appointmentLayout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ourServicesText"
+        app:layout_constraintStart_toEndOf="@+id/ambulanceLayout"
+        app:layout_constraintEnd_toStartOf="@+id/guideV2"
+        app:layout_constraintBottom_toTopOf="@+id/guideH3"
+
+
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:src="@drawable/baseline_airport_shuttle_24"
+            app:tint="@color/primary"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ambulance"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.61" />
+
+
+    <TextView
+        android:id="@+id/appointmentTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointments"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideH3"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintEnd_toStartOf="@+id/guideV2"
+        app:flow_horizontalBias="0"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintEnd_toStartOf="@+id/guideV2"
+        app:layout_constraintTop_toBottomOf="@+id/appointmentTxt"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dr. Juan"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Appointment Date"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dr. Juan"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Appointment Date"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dr. Juan"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Appointment Date"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dr. Juan"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Appointment Date"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

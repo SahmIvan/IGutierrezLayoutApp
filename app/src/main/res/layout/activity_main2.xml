@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/Wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/toy_story"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:foreground="@color/imageForeground"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55"
+
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+
+        />
+
+
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:src="@drawable/cover_page"
+        app:layout_constraintBottom_toTopOf="@+id/guideH2"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintTop_toBottomOf="@+id/guideH1"
+        app:layout_constraintEnd_toStartOf="@+id/guideV2"/>
+
+    <Button
+        android:id="@+id/Rent"
+        android:layout_width="124dp"
+        android:layout_height="66dp"
+        android:gravity="center"
+        android:text="@string/rentBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/guideH3"
+        app:layout_constraintEnd_toStartOf="@+id/guideV2"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintTop_toBottomOf="@+id/guideH2"
+
+
+        />
+    <Button
+        android:id="@+id/Buy"
+        android:layout_width="124dp"
+        android:layout_height="66dp"
+        android:gravity="center"
+        android:text="@string/buyBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/guideH3"
+        app:layout_constraintEnd_toStartOf="@+id/guideV3"
+        app:layout_constraintStart_toEndOf="@+id/guideV2"
+        app:layout_constraintTop_toBottomOf="@+id/guideH2"
+
+
+        />
+
+    <TextView
+        android:layout_width="323dp"
+        android:layout_height="130dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="@string/Summary"
+        app:layout_constraintBottom_toBottomOf="@+id/guideH4"
+        app:layout_constraintEnd_toStartOf="@+id/guideV3"
+        app:layout_constraintStart_toEndOf="@+id/guideV1"
+        app:layout_constraintTop_toBottomOf="@+id/guideH3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
